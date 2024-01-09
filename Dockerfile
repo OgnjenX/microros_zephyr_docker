@@ -1,4 +1,4 @@
-FROM microros/base:foxy
+FROM microros/base:iron
 LABEL maintainer="Robert Wilbrandt <robert@stamm-wilbrandt.de>"
 LABEL description="Everything needed to start using micro-ROS with the Zephyr RTOS"
 
@@ -6,7 +6,7 @@ LABEL description="Everything needed to start using micro-ROS with the Zephyr RT
 ARG PLATFORM_BOARD
 RUN test -n "$PLATFORM_BOARD"
 
-# This directory is set up in microros/base:foxy
+# This directory is set up in microros/base:iron
 WORKDIR /uros_ws
 
 RUN . install/setup.sh \
